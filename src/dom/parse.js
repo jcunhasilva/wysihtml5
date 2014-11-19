@@ -423,7 +423,12 @@ wysihtml5.dom.parse = (function() {
         attributeValue = (attributeValue || "").replace(REG_EXP, "");
         return attributeValue || null;
       };
-    })()
+    })(),
+    
+    novalidation: function(attributeValue) {
+      // pre-parsed attributes that don't require any validations 
+      return attributeValue;
+    }
   };
   
   // ------------ class converter (converts an html attribute to a class name) ------------ \\
